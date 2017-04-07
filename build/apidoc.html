@@ -1,0 +1,2753 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/mcollina/levelgraph#readme"
+
+    >levelgraph (v2.0.1)</a>
+</h1>
+<h4>A graph database for Node.js and the browser built on top of LevelUp</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.levelgraph">module levelgraph</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.filterstream">
+            function <span class="apidocSignatureSpan">levelgraph.</span>filterstream
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.joinstream">
+            function <span class="apidocSignatureSpan">levelgraph.</span>joinstream
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.materializerstream">
+            function <span class="apidocSignatureSpan">levelgraph.</span>materializerstream
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.navigator">
+            function <span class="apidocSignatureSpan">levelgraph.</span>navigator
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.sortjoinstream">
+            function <span class="apidocSignatureSpan">levelgraph.</span>sortjoinstream
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.variable">
+            function <span class="apidocSignatureSpan">levelgraph.</span>variable
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.writestream">
+            function <span class="apidocSignatureSpan">levelgraph.</span>writestream
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">levelgraph.</span>filterstream.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">levelgraph.</span>joinstream.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">levelgraph.</span>materializerstream.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">levelgraph.</span>navigator.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">levelgraph.</span>sortjoinstream.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">levelgraph.</span>utilities</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">levelgraph.</span>variable.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">levelgraph.</span>writestream.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.levelgraph.filterstream">module levelgraph.filterstream</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.filterstream.filterstream">
+            function <span class="apidocSignatureSpan">levelgraph.</span>filterstream
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.filterstream.super_">
+            function <span class="apidocSignatureSpan">levelgraph.filterstream.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.levelgraph.filterstream.prototype">module levelgraph.filterstream.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.filterstream.prototype._transform">
+            function <span class="apidocSignatureSpan">levelgraph.filterstream.prototype.</span>_transform
+            <span class="apidocSignatureSpan">(data, encoding, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.filterstream.prototype.destroy">
+            function <span class="apidocSignatureSpan">levelgraph.filterstream.prototype.</span>destroy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.levelgraph.joinstream">module levelgraph.joinstream</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.joinstream.joinstream">
+            function <span class="apidocSignatureSpan">levelgraph.</span>joinstream
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.joinstream.super_">
+            function <span class="apidocSignatureSpan">levelgraph.joinstream.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.levelgraph.joinstream.prototype">module levelgraph.joinstream.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.joinstream.prototype._transform">
+            function <span class="apidocSignatureSpan">levelgraph.joinstream.prototype.</span>_transform
+            <span class="apidocSignatureSpan">(solution, encoding, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.levelgraph.materializerstream">module levelgraph.materializerstream</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.materializerstream.materializerstream">
+            function <span class="apidocSignatureSpan">levelgraph.</span>materializerstream
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.materializerstream.super_">
+            function <span class="apidocSignatureSpan">levelgraph.materializerstream.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.levelgraph.materializerstream.prototype">module levelgraph.materializerstream.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.materializerstream.prototype._transform">
+            function <span class="apidocSignatureSpan">levelgraph.materializerstream.prototype.</span>_transform
+            <span class="apidocSignatureSpan">(data, encoding, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.levelgraph.navigator">module levelgraph.navigator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.navigator.navigator">
+            function <span class="apidocSignatureSpan">levelgraph.</span>navigator
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.levelgraph.navigator.prototype">module levelgraph.navigator.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.navigator.prototype.archIn">
+            function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>archIn
+            <span class="apidocSignatureSpan">(predicate)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.navigator.prototype.archOut">
+            function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>archOut
+            <span class="apidocSignatureSpan">(predicate)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.navigator.prototype.as">
+            function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>as
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.navigator.prototype.bind">
+            function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>bind
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.navigator.prototype.contexts">
+            function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>contexts
+            <span class="apidocSignatureSpan">(query, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.navigator.prototype.contextsStream">
+            function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>contextsStream
+            <span class="apidocSignatureSpan">(pattern)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.navigator.prototype.go">
+            function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>go
+            <span class="apidocSignatureSpan">(vertex)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.navigator.prototype.solutions">
+            function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>solutions
+            <span class="apidocSignatureSpan">(query, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.navigator.prototype.solutionsStream">
+            function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>solutionsStream
+            <span class="apidocSignatureSpan">(pattern)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.navigator.prototype.triples">
+            function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>triples
+            <span class="apidocSignatureSpan">(query, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.navigator.prototype.triplesStream">
+            function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>triplesStream
+            <span class="apidocSignatureSpan">(pattern)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.navigator.prototype.values">
+            function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>values
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.navigator.prototype.valuesStream">
+            function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>valuesStream
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.levelgraph.sortjoinstream">module levelgraph.sortjoinstream</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.sortjoinstream.sortjoinstream">
+            function <span class="apidocSignatureSpan">levelgraph.</span>sortjoinstream
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.sortjoinstream.super_">
+            function <span class="apidocSignatureSpan">levelgraph.sortjoinstream.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.levelgraph.sortjoinstream.prototype">module levelgraph.sortjoinstream.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.sortjoinstream.prototype._doRead">
+            function <span class="apidocSignatureSpan">levelgraph.sortjoinstream.prototype.</span>_doRead
+            <span class="apidocSignatureSpan">(triple)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.sortjoinstream.prototype._execLastDone">
+            function <span class="apidocSignatureSpan">levelgraph.sortjoinstream.prototype.</span>_execLastDone
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.sortjoinstream.prototype._flush">
+            function <span class="apidocSignatureSpan">levelgraph.sortjoinstream.prototype.</span>_flush
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.sortjoinstream.prototype._nextTriple">
+            function <span class="apidocSignatureSpan">levelgraph.sortjoinstream.prototype.</span>_nextTriple
+            <span class="apidocSignatureSpan">(skip)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.sortjoinstream.prototype._start">
+            function <span class="apidocSignatureSpan">levelgraph.sortjoinstream.prototype.</span>_start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.sortjoinstream.prototype._transform">
+            function <span class="apidocSignatureSpan">levelgraph.sortjoinstream.prototype.</span>_transform
+            <span class="apidocSignatureSpan">(solution, encoding, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.levelgraph.utilities">module levelgraph.utilities</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.utilities.createQuery">
+            function <span class="apidocSignatureSpan">levelgraph.utilities.</span>createQuery
+            <span class="apidocSignatureSpan">(pattern, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.utilities.escape">
+            function <span class="apidocSignatureSpan">levelgraph.utilities.</span>escape
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.utilities.findIndex">
+            function <span class="apidocSignatureSpan">levelgraph.utilities.</span>findIndex
+            <span class="apidocSignatureSpan">(types, preferiteIndex)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.utilities.genKey">
+            function <span class="apidocSignatureSpan">levelgraph.utilities.</span>genKey
+            <span class="apidocSignatureSpan">(key, triple)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.utilities.genKeys">
+            function <span class="apidocSignatureSpan">levelgraph.utilities.</span>genKeys
+            <span class="apidocSignatureSpan">(triple)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.utilities.generateBatch">
+            function <span class="apidocSignatureSpan">levelgraph.utilities.</span>generateBatch
+            <span class="apidocSignatureSpan">(triple, action)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.utilities.maskUpdater">
+            function <span class="apidocSignatureSpan">levelgraph.utilities.</span>maskUpdater
+            <span class="apidocSignatureSpan">(pattern)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.utilities.matcher">
+            function <span class="apidocSignatureSpan">levelgraph.utilities.</span>matcher
+            <span class="apidocSignatureSpan">(pattern)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.utilities.materializer">
+            function <span class="apidocSignatureSpan">levelgraph.utilities.</span>materializer
+            <span class="apidocSignatureSpan">(pattern, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.utilities.possibleIndexes">
+            function <span class="apidocSignatureSpan">levelgraph.utilities.</span>possibleIndexes
+            <span class="apidocSignatureSpan">(types)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.utilities.queryMask">
+            function <span class="apidocSignatureSpan">levelgraph.utilities.</span>queryMask
+            <span class="apidocSignatureSpan">(object)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.utilities.variablesMask">
+            function <span class="apidocSignatureSpan">levelgraph.utilities.</span>variablesMask
+            <span class="apidocSignatureSpan">(object)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.utilities.wrapCallback">
+            function <span class="apidocSignatureSpan">levelgraph.utilities.</span>wrapCallback
+            <span class="apidocSignatureSpan">(method)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">levelgraph.utilities.</span>defs</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.levelgraph.variable">module levelgraph.variable</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.variable.variable">
+            function <span class="apidocSignatureSpan">levelgraph.</span>variable
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.levelgraph.variable.prototype">module levelgraph.variable.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.variable.prototype.bind">
+            function <span class="apidocSignatureSpan">levelgraph.variable.prototype.</span>bind
+            <span class="apidocSignatureSpan">(solution, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.variable.prototype.isBindable">
+            function <span class="apidocSignatureSpan">levelgraph.variable.prototype.</span>isBindable
+            <span class="apidocSignatureSpan">(solution, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.variable.prototype.isBound">
+            function <span class="apidocSignatureSpan">levelgraph.variable.prototype.</span>isBound
+            <span class="apidocSignatureSpan">(solution)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.levelgraph.writestream">module levelgraph.writestream</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.writestream.writestream">
+            function <span class="apidocSignatureSpan">levelgraph.</span>writestream
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.writestream.super_">
+            function <span class="apidocSignatureSpan">levelgraph.writestream.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.levelgraph.writestream.prototype">module levelgraph.writestream.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.levelgraph.writestream.prototype._transform">
+            function <span class="apidocSignatureSpan">levelgraph.writestream.prototype.</span>_transform
+            <span class="apidocSignatureSpan">(data, encoding, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.levelgraph" id="apidoc.module.levelgraph">module levelgraph</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.filterstream" id="apidoc.element.levelgraph.filterstream">
+        function <span class="apidocSignatureSpan">levelgraph.</span>filterstream
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FilterStream(options) {
+  if (!(this instanceof FilterStream)) {
+    return new FilterStream(options);
+  }
+
+  options.objectMode = true;
+
+  Transform.call(this, options);
+
+  var that = this;
+
+  this.filter = options.filter;
+  this.offset = options.offset;
+
+  this._offsetCounter = 0;
+
+  this._destroyed = false;
+
+  if (this.filter &#x26;&#x26; this.filter.length === 2) {
+    this._transform = filterTwoArguments;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.joinstream" id="apidoc.element.levelgraph.joinstream">
+        function <span class="apidocSignatureSpan">levelgraph.</span>joinstream
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function JoinStream(options) {
+  if (!(this instanceof JoinStream)) {
+    return new JoinStream(options);
+  }
+
+  options.objectMode = true;
+
+  Transform.call(this, options);
+
+  this.triple = options.triple;
+  this.matcher = matcher(options.triple);
+  this.mask = queryMask(options.triple);
+  this.maskUpdater = maskUpdater(options.triple);
+  this.limit = options.limit;
+  this._limitCounter = 0;
+  this.db = options.db;
+  this._index = options.index;
+  this._ended = false;
+
+  var that = this;
+  this.once(&#x27;pipe&#x27;, function(source) {
+    source.on(&#x27;error&#x27;, function(err) {
+      that.emit(&#x27;error&#x27;, err);
+    });
+  });
+
+  this._onDataStream = function onDataStream(triple) {
+    var newsolution = that.matcher(that._lastSolution, triple);
+
+    if (that._ended || !newsolution) {
+      return;
+    }
+
+    that.push(newsolution);
+
+    if (that.limit &#x26;&#x26; ++that._limitCounter === that.limit) {
+      that._readStream.destroy();
+      that._ended = true;
+      that.push(null);
+    }
+  };
+
+  this._indexPreferences = { index: this._index };
+
+  this._onErrorStream = function onErrorStream(err) {
+    that.emit(&#x27;error&#x27;, err);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.materializerstream" id="apidoc.element.levelgraph.materializerstream">
+        function <span class="apidocSignatureSpan">levelgraph.</span>materializerstream
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MaterializerStream(options) {
+  if (!(this instanceof MaterializerStream)) {
+    return new MaterializerStream(options);
+  }
+
+  options.objectMode = true;
+
+  Transform.call(this, options);
+
+  this.pattern = options.pattern;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.navigator" id="apidoc.element.levelgraph.navigator">
+        function <span class="apidocSignatureSpan">levelgraph.</span>navigator
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Navigator(options) {
+  if (!(this instanceof Navigator)) {
+    return new Navigator(options);
+  }
+
+  this.db = options.db;
+  this._conditions = [];
+  this._initialSolution = {};
+
+  var count = 0;
+  this._nextVar = function() {
+    return this.db.v(&#x27;x&#x27; + count++);
+  };
+
+  this.go(options.start);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.sortjoinstream" id="apidoc.element.levelgraph.sortjoinstream">
+        function <span class="apidocSignatureSpan">levelgraph.</span>sortjoinstream
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SortJoinStream(options) {
+  if (!(this instanceof SortJoinStream)) {
+    return new SortJoinStream(options);
+  }
+
+  options.objectMode = true;
+
+  Transform.call(this, options);
+
+  this.triple = options.triple;
+  this.matcher = matcher(options.triple);
+  this.db = options.db;
+
+  var that = this;
+  this.once(&#x27;pipe&#x27;, function(source) {
+    source.on(&#x27;error&#x27;, function(err) {
+      that.emit(&#x27;error&#x27;, err);
+    });
+  });
+
+  this._queryMask = queryMask(options.triple);
+  this._queryMask.filter = options.triple.filter;
+
+  this.index = options.index;
+
+  this._previousTriple = null;
+  this._lastDone = null;
+  this._start();
+  this.limit = options.limit;
+  this._limitCounter = 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.variable" id="apidoc.element.levelgraph.variable">
+        function <span class="apidocSignatureSpan">levelgraph.</span>variable
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Variable(name) {
+  if (!(this instanceof Variable)) {
+    return new Variable(name);
+  }
+
+  this.name = name;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.writestream" id="apidoc.element.levelgraph.writestream">
+        function <span class="apidocSignatureSpan">levelgraph.</span>writestream
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WriteStream(options) {
+  if (!(this instanceof WriteStream)) {
+    return new WriteStream(options);
+  }
+
+  options = options || {};
+  options.objectMode = true;
+
+  Transform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.levelgraph.filterstream" id="apidoc.module.levelgraph.filterstream">module levelgraph.filterstream</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.filterstream.filterstream" id="apidoc.element.levelgraph.filterstream.filterstream">
+        function <span class="apidocSignatureSpan">levelgraph.</span>filterstream
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FilterStream(options) {
+  if (!(this instanceof FilterStream)) {
+    return new FilterStream(options);
+  }
+
+  options.objectMode = true;
+
+  Transform.call(this, options);
+
+  var that = this;
+
+  this.filter = options.filter;
+  this.offset = options.offset;
+
+  this._offsetCounter = 0;
+
+  this._destroyed = false;
+
+  if (this.filter &#x26;&#x26; this.filter.length === 2) {
+    this._transform = filterTwoArguments;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.filterstream.super_" id="apidoc.element.levelgraph.filterstream.super_">
+        function <span class="apidocSignatureSpan">levelgraph.filterstream.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Transform(options) {
+  if (!(this instanceof Transform)) return new Transform(options);
+
+  Duplex.call(this, options);
+
+  this._transformState = new TransformState(this);
+
+  var stream = this;
+
+  // start out asking for a readable event once data is transformed.
+  this._readableState.needReadable = true;
+
+  // we have implemented the _read method, and done the other things
+  // that Readable wants before the first _read call, so unset the
+  // sync guard flag.
+  this._readableState.sync = false;
+
+  if (options) {
+    if (typeof options.transform === &#x27;function&#x27;) this._transform = options.transform;
+
+    if (typeof options.flush === &#x27;function&#x27;) this._flush = options.flush;
+  }
+
+  // When the writable side finishes, then flush out anything remaining.
+  this.once(&#x27;prefinish&#x27;, function () {
+    if (typeof this._flush === &#x27;function&#x27;) this._flush(function (er, data) {
+      done(stream, er, data);
+    });else done(stream);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.levelgraph.filterstream.prototype" id="apidoc.module.levelgraph.filterstream.prototype">module levelgraph.filterstream.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.filterstream.prototype._transform" id="apidoc.element.levelgraph.filterstream.prototype._transform">
+        function <span class="apidocSignatureSpan">levelgraph.filterstream.prototype.</span>_transform
+        <span class="apidocSignatureSpan">(data, encoding, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function filterOneArgument(data, encoding, done) {
+
+  if ((!this.offset || ++this._offsetCounter &#x3e; this.offset) &#x26;&#x26;
+      (!this.filter || this.filter(data))) {
+    this.push(data);
+  }
+
+  done();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.filterstream.prototype.destroy" id="apidoc.element.levelgraph.filterstream.prototype.destroy">
+        function <span class="apidocSignatureSpan">levelgraph.filterstream.prototype.</span>destroy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function () {
+  if (!this._destroyed) {
+    this.push(null);
+  }
+  this._destroyed = true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (that._ended || !newsolution) {
+    return;
+  }
+
+  that.push(newsolution);
+
+  if (that.limit &#x26;&#x26; ++that._limitCounter === that.limit) {
+    that._readStream.<span class="apidocCodeKeywordSpan">destroy</span>();
+    that._ended = true;
+    that.push(null);
+  }
+};
+
+this._indexPreferences = { index: this._index };
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.levelgraph.joinstream" id="apidoc.module.levelgraph.joinstream">module levelgraph.joinstream</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.joinstream.joinstream" id="apidoc.element.levelgraph.joinstream.joinstream">
+        function <span class="apidocSignatureSpan">levelgraph.</span>joinstream
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function JoinStream(options) {
+  if (!(this instanceof JoinStream)) {
+    return new JoinStream(options);
+  }
+
+  options.objectMode = true;
+
+  Transform.call(this, options);
+
+  this.triple = options.triple;
+  this.matcher = matcher(options.triple);
+  this.mask = queryMask(options.triple);
+  this.maskUpdater = maskUpdater(options.triple);
+  this.limit = options.limit;
+  this._limitCounter = 0;
+  this.db = options.db;
+  this._index = options.index;
+  this._ended = false;
+
+  var that = this;
+  this.once(&#x27;pipe&#x27;, function(source) {
+    source.on(&#x27;error&#x27;, function(err) {
+      that.emit(&#x27;error&#x27;, err);
+    });
+  });
+
+  this._onDataStream = function onDataStream(triple) {
+    var newsolution = that.matcher(that._lastSolution, triple);
+
+    if (that._ended || !newsolution) {
+      return;
+    }
+
+    that.push(newsolution);
+
+    if (that.limit &#x26;&#x26; ++that._limitCounter === that.limit) {
+      that._readStream.destroy();
+      that._ended = true;
+      that.push(null);
+    }
+  };
+
+  this._indexPreferences = { index: this._index };
+
+  this._onErrorStream = function onErrorStream(err) {
+    that.emit(&#x27;error&#x27;, err);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.joinstream.super_" id="apidoc.element.levelgraph.joinstream.super_">
+        function <span class="apidocSignatureSpan">levelgraph.joinstream.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Transform(options) {
+  if (!(this instanceof Transform)) return new Transform(options);
+
+  Duplex.call(this, options);
+
+  this._transformState = new TransformState(this);
+
+  var stream = this;
+
+  // start out asking for a readable event once data is transformed.
+  this._readableState.needReadable = true;
+
+  // we have implemented the _read method, and done the other things
+  // that Readable wants before the first _read call, so unset the
+  // sync guard flag.
+  this._readableState.sync = false;
+
+  if (options) {
+    if (typeof options.transform === &#x27;function&#x27;) this._transform = options.transform;
+
+    if (typeof options.flush === &#x27;function&#x27;) this._flush = options.flush;
+  }
+
+  // When the writable side finishes, then flush out anything remaining.
+  this.once(&#x27;prefinish&#x27;, function () {
+    if (typeof this._flush === &#x27;function&#x27;) this._flush(function (er, data) {
+      done(stream, er, data);
+    });else done(stream);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.levelgraph.joinstream.prototype" id="apidoc.module.levelgraph.joinstream.prototype">module levelgraph.joinstream.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.joinstream.prototype._transform" id="apidoc.element.levelgraph.joinstream.prototype._transform">
+        function <span class="apidocSignatureSpan">levelgraph.joinstream.prototype.</span>_transform
+        <span class="apidocSignatureSpan">(solution, encoding, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transform(solution, encoding, done) {
+  if (this._ended) {
+    return done();
+  }
+
+  var that = this
+    , newMask = this.maskUpdater(solution, this.mask);
+
+  that._lastSolution = solution;
+  that._readStream = this.db.getStream(newMask, this._indexPreferences);
+
+  that._readStream.on(&#x27;data&#x27;, that._onDataStream);
+  that._readStream.on(&#x27;error&#x27;, that._onErrorStream);
+  that._readStream.on(&#x27;end&#x27;, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.levelgraph.materializerstream" id="apidoc.module.levelgraph.materializerstream">module levelgraph.materializerstream</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.materializerstream.materializerstream" id="apidoc.element.levelgraph.materializerstream.materializerstream">
+        function <span class="apidocSignatureSpan">levelgraph.</span>materializerstream
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MaterializerStream(options) {
+  if (!(this instanceof MaterializerStream)) {
+    return new MaterializerStream(options);
+  }
+
+  options.objectMode = true;
+
+  Transform.call(this, options);
+
+  this.pattern = options.pattern;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.materializerstream.super_" id="apidoc.element.levelgraph.materializerstream.super_">
+        function <span class="apidocSignatureSpan">levelgraph.materializerstream.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Transform(options) {
+  if (!(this instanceof Transform)) return new Transform(options);
+
+  Duplex.call(this, options);
+
+  this._transformState = new TransformState(this);
+
+  var stream = this;
+
+  // start out asking for a readable event once data is transformed.
+  this._readableState.needReadable = true;
+
+  // we have implemented the _read method, and done the other things
+  // that Readable wants before the first _read call, so unset the
+  // sync guard flag.
+  this._readableState.sync = false;
+
+  if (options) {
+    if (typeof options.transform === &#x27;function&#x27;) this._transform = options.transform;
+
+    if (typeof options.flush === &#x27;function&#x27;) this._flush = options.flush;
+  }
+
+  // When the writable side finishes, then flush out anything remaining.
+  this.once(&#x27;prefinish&#x27;, function () {
+    if (typeof this._flush === &#x27;function&#x27;) this._flush(function (er, data) {
+      done(stream, er, data);
+    });else done(stream);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.levelgraph.materializerstream.prototype" id="apidoc.module.levelgraph.materializerstream.prototype">module levelgraph.materializerstream.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.materializerstream.prototype._transform" id="apidoc.element.levelgraph.materializerstream.prototype._transform">
+        function <span class="apidocSignatureSpan">levelgraph.materializerstream.prototype.</span>_transform
+        <span class="apidocSignatureSpan">(data, encoding, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_transform = function (data, encoding, done) {
+
+  this.push(materializer(this.pattern, data));
+
+  done();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.levelgraph.navigator" id="apidoc.module.levelgraph.navigator">module levelgraph.navigator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.navigator.navigator" id="apidoc.element.levelgraph.navigator.navigator">
+        function <span class="apidocSignatureSpan">levelgraph.</span>navigator
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Navigator(options) {
+  if (!(this instanceof Navigator)) {
+    return new Navigator(options);
+  }
+
+  this.db = options.db;
+  this._conditions = [];
+  this._initialSolution = {};
+
+  var count = 0;
+  this._nextVar = function() {
+    return this.db.v(&#x27;x&#x27; + count++);
+  };
+
+  this.go(options.start);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.levelgraph.navigator.prototype" id="apidoc.module.levelgraph.navigator.prototype">module levelgraph.navigator.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.navigator.prototype.archIn" id="apidoc.element.levelgraph.navigator.prototype.archIn">
+        function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>archIn
+        <span class="apidocSignatureSpan">(predicate)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">archIn = function (predicate) {
+  var triple = {
+    predicate: predicate
+  };
+
+  triple[varKey] = this._nextVar();
+  triple[lastKey] = this._lastElement;
+
+  this._conditions.push(triple);
+
+  this._lastElement = triple[varKey];
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+The Navigator API is a fluent API for LevelGraph, loosely inspired by
+[Gremlin](http://markorodriguez.com/2011/06/15/graph-pattern-matching-with-gremlin-1-1/)
+It allows to specify how to search our graph in a much more compact way and navigate
+between vertexes.
+
+Here is an example, using the same dataset as before:
+```javascript
+db.nav(&#x22;matteo&#x22;).<span class="apidocCodeKeywordSpan">archIn</span>(&#x22;friend&#x22;).archOut(&#x22;friend&#x22;).
+  solutions(function(err, results) {
+  // prints:
+  // [ { x0: &#x27;daniele&#x27;, x1: &#x27;marco&#x27; },
+  //   { x0: &#x27;daniele&#x27;, x1: &#x27;matteo&#x27; },
+  //   { x0: &#x27;lucio&#x27;, x1: &#x27;marco&#x27; },
+  //   { x0: &#x27;lucio&#x27;, x1: &#x27;matteo&#x27; } ]
+  console.log(results);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.navigator.prototype.archOut" id="apidoc.element.levelgraph.navigator.prototype.archOut">
+        function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>archOut
+        <span class="apidocSignatureSpan">(predicate)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">archOut = function (predicate) {
+  var triple = {
+    predicate: predicate
+  };
+
+  triple[varKey] = this._nextVar();
+  triple[lastKey] = this._lastElement;
+
+  this._conditions.push(triple);
+
+  this._lastElement = triple[varKey];
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+The Navigator API is a fluent API for LevelGraph, loosely inspired by
+[Gremlin](http://markorodriguez.com/2011/06/15/graph-pattern-matching-with-gremlin-1-1/)
+It allows to specify how to search our graph in a much more compact way and navigate
+between vertexes.
+
+Here is an example, using the same dataset as before:
+```javascript
+db.nav(&#x22;matteo&#x22;).archIn(&#x22;friend&#x22;).<span class="apidocCodeKeywordSpan">archOut</span>(&#x22;friend&#x22;).
+  solutions(function(err, results) {
+  // prints:
+  // [ { x0: &#x27;daniele&#x27;, x1: &#x27;marco&#x27; },
+  //   { x0: &#x27;daniele&#x27;, x1: &#x27;matteo&#x27; },
+  //   { x0: &#x27;lucio&#x27;, x1: &#x27;marco&#x27; },
+  //   { x0: &#x27;lucio&#x27;, x1: &#x27;matteo&#x27; } ]
+  console.log(results);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.navigator.prototype.as" id="apidoc.element.levelgraph.navigator.prototype.as">
+        function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>as
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">as = function (name) {
+  this._lastElement.name = name;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      // prints [ &#x27;marco&#x27;, &#x27;matteo&#x27; ]
+      console.log(results);
+    });
+```
+
+Variable names can also be specified, like so:
+```javascript
+db.nav(&#x22;marco&#x22;).archIn(&#x22;friend&#x22;).<span class="apidocCodeKeywordSpan">as</span>(&#x22;a&#x22;).archOut(&#x22;
+friend&#x22;).archOut(&#x22;friend&#x22;).as(&#x22;a&#x22;).
+      solutions(function(err, friends) {
+
+  console.log(friends); // will print [{ a: &#x22;daniele&#x22; }]
+});
+```
+
+Variables can also be bound to a specific value, like so:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.navigator.prototype.bind" id="apidoc.element.levelgraph.navigator.prototype.bind">
+        function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>bind
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bind = function (value) {
+  this._initialSolution[this._lastElement.name] = value;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  console.log(friends); // will print [{ a: &#x22;daniele&#x22; }]
+});
+```
+
+Variables can also be bound to a specific value, like so:
+```javascript
+db.nav(&#x22;matteo&#x22;).archIn(&#x22;friend&#x22;).<span class="apidocCodeKeywordSpan">bind</span>(&#x22;lucio&#x22;).archOut
+(&#x22;friend&#x22;).bind(&#x22;marco&#x22;).
+      values(function(err, friends) {
+  console.log(friends); // this will print [&#x27;marco&#x27;]
+});
+```
+
+A materialized search can also be produced, like so:
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.navigator.prototype.contexts" id="apidoc.element.levelgraph.navigator.prototype.contexts">
+        function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>contexts
+        <span class="apidocSignatureSpan">(query, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">contexts = function (query, cb) {
+  var args = Array.prototype.slice.call(arguments, 0)
+    , callback = args.pop()
+    , stream = null;
+
+  stream = this[method].apply(this, args);
+
+  stream.pipe(new CallbackStream({ objectMode: true }, callback));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.navigator.prototype.contextsStream" id="apidoc.element.levelgraph.navigator.prototype.contextsStream">
+        function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>contextsStream
+        <span class="apidocSignatureSpan">(pattern)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">contextsStream = function (pattern) {
+
+  var stream = null;
+
+  var options = {
+    solution: this._initialSolution,
+    materialized: pattern
+  };
+  stream = this.db.searchStream(this._conditions, options);
+
+  return stream;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.navigator.prototype.go" id="apidoc.element.levelgraph.navigator.prototype.go">
+        function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>go
+        <span class="apidocSignatureSpan">(vertex)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">go = function (vertex) {
+  if (!vertex) {
+    vertex = this._nextVar();
+  }
+  this._lastElement = vertex;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  console.log(results);
+});
+```
+
+It is also possible to change the current vertex:
+```javascript
+db.nav(&#x22;marco&#x22;).archIn(&#x22;friend&#x22;).as(&#x22;a&#x22;).<span class="apidocCodeKeywordSpan">go</span>(&#x22;matteo
+&#x22;).archOut(&#x22;friend&#x22;).as(&#x22;b&#x22;).
+   solutions(function(err, solutions) {
+
+//  solutions is: [{
+//    a: &#x22;daniele&#x22;,
+//    b: &#x22;daniele&#x22;
+//   }, {
+//     a: &#x22;lucio&#x22;,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.navigator.prototype.solutions" id="apidoc.element.levelgraph.navigator.prototype.solutions">
+        function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>solutions
+        <span class="apidocSignatureSpan">(query, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">solutions = function (query, cb) {
+  var args = Array.prototype.slice.call(arguments, 0)
+    , callback = args.pop()
+    , stream = null;
+
+  stream = this[method].apply(this, args);
+
+  stream.pipe(new CallbackStream({ objectMode: true }, callback));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.navigator.prototype.solutionsStream" id="apidoc.element.levelgraph.navigator.prototype.solutionsStream">
+        function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>solutionsStream
+        <span class="apidocSignatureSpan">(pattern)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">solutionsStream = function (pattern) {
+
+  var stream = null;
+
+  var options = {
+    solution: this._initialSolution,
+    materialized: pattern
+  };
+  stream = this.db.searchStream(this._conditions, options);
+
+  return stream;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.navigator.prototype.triples" id="apidoc.element.levelgraph.navigator.prototype.triples">
+        function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>triples
+        <span class="apidocSignatureSpan">(query, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">triples = function (query, cb) {
+  var args = Array.prototype.slice.call(arguments, 0)
+    , callback = args.pop()
+    , stream = null;
+
+  stream = this[method].apply(this, args);
+
+  stream.pipe(new CallbackStream({ objectMode: true }, callback));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.navigator.prototype.triplesStream" id="apidoc.element.levelgraph.navigator.prototype.triplesStream">
+        function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>triplesStream
+        <span class="apidocSignatureSpan">(pattern)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">triplesStream = function (pattern) {
+
+  var stream = null;
+
+  var options = {
+    solution: this._initialSolution,
+    materialized: pattern
+  };
+  stream = this.db.searchStream(this._conditions, options);
+
+  return stream;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.navigator.prototype.values" id="apidoc.element.levelgraph.navigator.prototype.values">
+        function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>values
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">values = function (cb) {
+  var that = this
+    , stream = this.valuesStream()
+    , collect = function(err, results) {
+        if (err) {
+          cb(err);
+          return;
+        }
+
+        results = results.reduce(function(acc, result) {
+          if (acc.indexOf(result) &#x3c; 0) {
+            acc.push(result);
+          }
+          return acc;
+        }, []);
+
+        cb(null, results);
+      };
+
+  stream.pipe(new CallbackStream({
+    objectMode: true
+  }, collect));
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.navigator.prototype.valuesStream" id="apidoc.element.levelgraph.navigator.prototype.valuesStream">
+        function <span class="apidocSignatureSpan">levelgraph.navigator.prototype.</span>valuesStream
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">valuesStream = function () {
+  var stream, options;
+
+  stream = new NavigatorStream({
+    _lastElement: this._lastElement
+  });
+
+  if (this._conditions.length === 0) {
+    stream.end({});
+    return stream;
+  }
+
+  options = { solution: this._initialSolution };
+
+  pump(this.db.searchStream(this._conditions, options), stream);
+
+  return stream;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  pump(this.db.searchStream(this._conditions, options), stream);
+
+  return stream;
+};
+
+Navigator.prototype.values = function (cb) {
+  var that = this
+    , stream = this.<span class="apidocCodeKeywordSpan">valuesStream</span>()
+    , collect = function(err, results) {
+if (err) {
+  cb(err);
+  return;
+}
+
+results = results.reduce(function(acc, result) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.levelgraph.sortjoinstream" id="apidoc.module.levelgraph.sortjoinstream">module levelgraph.sortjoinstream</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.sortjoinstream.sortjoinstream" id="apidoc.element.levelgraph.sortjoinstream.sortjoinstream">
+        function <span class="apidocSignatureSpan">levelgraph.</span>sortjoinstream
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SortJoinStream(options) {
+  if (!(this instanceof SortJoinStream)) {
+    return new SortJoinStream(options);
+  }
+
+  options.objectMode = true;
+
+  Transform.call(this, options);
+
+  this.triple = options.triple;
+  this.matcher = matcher(options.triple);
+  this.db = options.db;
+
+  var that = this;
+  this.once(&#x27;pipe&#x27;, function(source) {
+    source.on(&#x27;error&#x27;, function(err) {
+      that.emit(&#x27;error&#x27;, err);
+    });
+  });
+
+  this._queryMask = queryMask(options.triple);
+  this._queryMask.filter = options.triple.filter;
+
+  this.index = options.index;
+
+  this._previousTriple = null;
+  this._lastDone = null;
+  this._start();
+  this.limit = options.limit;
+  this._limitCounter = 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.sortjoinstream.super_" id="apidoc.element.levelgraph.sortjoinstream.super_">
+        function <span class="apidocSignatureSpan">levelgraph.sortjoinstream.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Transform(options) {
+  if (!(this instanceof Transform)) return new Transform(options);
+
+  Duplex.call(this, options);
+
+  this._transformState = new TransformState(this);
+
+  var stream = this;
+
+  // start out asking for a readable event once data is transformed.
+  this._readableState.needReadable = true;
+
+  // we have implemented the _read method, and done the other things
+  // that Readable wants before the first _read call, so unset the
+  // sync guard flag.
+  this._readableState.sync = false;
+
+  if (options) {
+    if (typeof options.transform === &#x27;function&#x27;) this._transform = options.transform;
+
+    if (typeof options.flush === &#x27;function&#x27;) this._flush = options.flush;
+  }
+
+  // When the writable side finishes, then flush out anything remaining.
+  this.once(&#x27;prefinish&#x27;, function () {
+    if (typeof this._flush === &#x27;function&#x27;) this._flush(function (er, data) {
+      done(stream, er, data);
+    });else done(stream);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.levelgraph.sortjoinstream.prototype" id="apidoc.module.levelgraph.sortjoinstream.prototype">module levelgraph.sortjoinstream.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.sortjoinstream.prototype._doRead" id="apidoc.element.levelgraph.sortjoinstream.prototype._doRead">
+        function <span class="apidocSignatureSpan">levelgraph.sortjoinstream.prototype.</span>_doRead
+        <span class="apidocSignatureSpan">(triple)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function doRead(triple) {
+
+  var newsolution = this.matcher(this._lastSolution, triple)
+    , key
+    , otherKey
+    , done = this._lastDone;
+
+  key = genKeyWithEnding(this.index, materializer(this.triple, this._lastSolution));
+  otherKey = genKey(this.index, triple);
+
+  if (newsolution) {
+    this.push(newsolution);
+
+    if (this.limit &#x26;&#x26; ++this._limitCounter === this.limit) {
+      this._previousTriple = null;
+      this._execLastDone();
+      this._readStream.destroy();
+      this._readStream = null;
+      return;
+    }
+  }
+
+  if (key &#x3e; otherKey) {
+    this._nextTriple(true);
+  } else {
+    this._lastDone = null;
+    done();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+if (!this._previousTriple &#x26;&#x26; this._readStream) {
+  this._previousTriple = this._readStream.read();
+}
+
+if (this._previousTriple) {
+  this.<span class="apidocCodeKeywordSpan">_doRead</span>(this._previousTriple);
+} else if (!this._readStream) {
+  this.push(null);
+}
+};
+
+SortJoinStream.prototype._start = function() {
+var that = this;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.sortjoinstream.prototype._execLastDone" id="apidoc.element.levelgraph.sortjoinstream.prototype._execLastDone">
+        function <span class="apidocSignatureSpan">levelgraph.sortjoinstream.prototype.</span>_execLastDone
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_execLastDone = function () {
+  var that = this;
+  if(that._lastDone) {
+    var func = that._lastDone;
+    that._lastDone = null;
+    func();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this._readStream.on(&#x27;error&#x27;, function(err) {
+  that.emit(&#x27;error&#x27;, err);
+});
+
+this._readStream.on(&#x27;close&#x27;, function() {
+  that._readStream = null;
+  if (!that._previousTriple) {
+    that.<span class="apidocCodeKeywordSpan">_execLastDone</span>();
+  }
+});
+
+this._readStream.on(&#x27;readable&#x27;, function() {
+  if (that._lastDone) {
+    that._nextTriple();
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.sortjoinstream.prototype._flush" id="apidoc.element.levelgraph.sortjoinstream.prototype._flush">
+        function <span class="apidocSignatureSpan">levelgraph.sortjoinstream.prototype.</span>_flush
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_flush = function (cb) {
+  var that = this;
+
+  this._execLastDone();
+
+  if (this._readStream) {
+    that._readStream.destroy();
+  }
+
+  this.push(null);
+
+  cb();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.sortjoinstream.prototype._nextTriple" id="apidoc.element.levelgraph.sortjoinstream.prototype._nextTriple">
+        function <span class="apidocSignatureSpan">levelgraph.sortjoinstream.prototype.</span>_nextTriple
+        <span class="apidocSignatureSpan">(skip)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function nextTriple(skip) {
+  var triple;
+
+  if (skip) {
+    this._previousTriple = null;
+  }
+
+  if (!this._previousTriple &#x26;&#x26; this._readStream) {
+    this._previousTriple = this._readStream.read();
+  }
+
+  if (this._previousTriple) {
+    this._doRead(this._previousTriple);
+  } else if (!this._readStream) {
+    this.push(null);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (!that._previousTriple) {
+    that._execLastDone();
+  }
+});
+
+this._readStream.on(&#x27;readable&#x27;, function() {
+  if (that._lastDone) {
+    that.<span class="apidocCodeKeywordSpan">_nextTriple</span>();
+  }
+});
+};
+
+SortJoinStream.prototype._execLastDone = function() {
+var that = this;
+if(that._lastDone) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.sortjoinstream.prototype._start" id="apidoc.element.levelgraph.sortjoinstream.prototype._start">
+        function <span class="apidocSignatureSpan">levelgraph.sortjoinstream.prototype.</span>_start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_start = function () {
+  var that = this;
+
+  this._readStream = this.db.getStream(this._queryMask, { index: this.index });
+
+  this._readStream.on(&#x27;error&#x27;, function(err) {
+    that.emit(&#x27;error&#x27;, err);
+  });
+
+  this._readStream.on(&#x27;close&#x27;, function() {
+    that._readStream = null;
+    if (!that._previousTriple) {
+      that._execLastDone();
+    }
+  });
+
+  this._readStream.on(&#x27;readable&#x27;, function() {
+    if (that._lastDone) {
+      that._nextTriple();
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  this._queryMask = queryMask(options.triple);
+  this._queryMask.filter = options.triple.filter;
+
+  this.index = options.index;
+
+  this._previousTriple = null;
+  this._lastDone = null;
+  this.<span class="apidocCodeKeywordSpan">_start</span>();
+  this.limit = options.limit;
+  this._limitCounter = 0;
+}
+
+inherits(SortJoinStream, Transform);
+
+SortJoinStream.prototype._nextTriple = function nextTriple(skip) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.sortjoinstream.prototype._transform" id="apidoc.element.levelgraph.sortjoinstream.prototype._transform">
+        function <span class="apidocSignatureSpan">levelgraph.sortjoinstream.prototype.</span>_transform
+        <span class="apidocSignatureSpan">(solution, encoding, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_transform = function (solution, encoding, done) {
+  this._lastSolution = solution;
+  this._lastDone = done;
+  this._nextTriple(false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.levelgraph.utilities" id="apidoc.module.levelgraph.utilities">module levelgraph.utilities</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.utilities.createQuery" id="apidoc.element.levelgraph.utilities.createQuery">
+        function <span class="apidocSignatureSpan">levelgraph.utilities.</span>createQuery
+        <span class="apidocSignatureSpan">(pattern, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createQuery(pattern, options) {
+  var types = typesFromPattern(pattern)
+    , preferiteIndex = options &#x26;&#x26; options.index
+    , index = findIndex(types, preferiteIndex)
+    , key = genKey(index, pattern, &#x27;&#x27;)
+    , limit = pattern.limit
+    , reverse = pattern.reverse || false
+    , start = reverse ? applyUpperBoundChar(key) : key
+    , end = reverse ? key : applyUpperBoundChar(key)
+    , query = {
+          start: start
+        , end: end
+        , reverse: reverse
+        , fillCache: true
+        , limit: typeof limit === &#x27;number&#x27; &#x26;&#x26; limit || -1
+        , highWaterMark: 16
+        , valueEncoding: &#x27;json&#x27;
+      };
+
+  return query;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+### Generate levelup query
+
+Return the leveldb query for the given triple.
+
+```js
+var query = db.<span class="apidocCodeKeywordSpan">createQuery</span>({ predicate: &#x22;b&#x22;});
+leveldb.createReadStream(query);
+```
+
+## Navigator API
+
+The Navigator API is a fluent API for LevelGraph, loosely inspired by
+[Gremlin](http://markorodriguez.com/2011/06/15/graph-pattern-matching-with-gremlin-1-1/)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.utilities.escape" id="apidoc.element.levelgraph.utilities.escape">
+        function <span class="apidocSignatureSpan">levelgraph.utilities.</span>escape
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function escape(value) {
+  if (typeof value === &#x27;string&#x27; || value instanceof String) {
+    return value.replace(/(\\|:)/g,&#x27;\\$&#x26;&#x27;);
+  }
+  return value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.utilities.findIndex" id="apidoc.element.levelgraph.utilities.findIndex">
+        function <span class="apidocSignatureSpan">levelgraph.utilities.</span>findIndex
+        <span class="apidocSignatureSpan">(types, preferiteIndex)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findIndex(types, preferiteIndex) {
+  var result = possibleIndexes(types)
+    , index
+    , there;
+
+  there = result.some(function(r) {
+    return r === preferiteIndex;
+  });
+
+  if (preferiteIndex &#x26;&#x26; there) {
+    index = preferiteIndex;
+  } else {
+    index = result[0];
+  }
+
+  return index;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.utilities.genKey" id="apidoc.element.levelgraph.utilities.genKey">
+        function <span class="apidocSignatureSpan">levelgraph.utilities.</span>genKey
+        <span class="apidocSignatureSpan">(key, triple)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function genKey(key, triple) {
+  var result = key, def = defs[key], value, i;
+
+  for (i = 0; (value = triple[def[i]]) !== null &#x26;&#x26;
+              value !== undefined; i++) {
+    result += &#x27;::&#x27; + escape(value);
+  }
+
+  if (i &#x3c; 3) {
+    result += &#x27;::&#x27;;
+  }
+
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.utilities.genKeys" id="apidoc.element.levelgraph.utilities.genKeys">
+        function <span class="apidocSignatureSpan">levelgraph.utilities.</span>genKeys
+        <span class="apidocSignatureSpan">(triple)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function genKeys(triple) {
+  var i, result = [];
+
+  for (i = 0; i &#x3c; defKeys.length; i++) {
+    result.push(genKey(defKeys[i], triple));
+  }
+
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.utilities.generateBatch" id="apidoc.element.levelgraph.utilities.generateBatch">
+        function <span class="apidocSignatureSpan">levelgraph.utilities.</span>generateBatch
+        <span class="apidocSignatureSpan">(triple, action)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function generateBatch(triple, action) {
+  if (!action) {
+    action = &#x27;put&#x27;;
+  }
+  var json = JSON.stringify(triple);
+  return genKeys(triple).map(function(key) {
+    return { type: action, key: key, value: json };
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+You can also generate a `put` and `del` batch, so you can
+manage the batching yourself:
+
+```javascript
+var triple = { subject: &#x22;a&#x22;, predicate: &#x22;b&#x22;, object: &#x22;c&#x22; };
+
+// Produces a batch of put operations
+var putBatch = db.<span class="apidocCodeKeywordSpan">generateBatch</span>(triple);
+
+// Produces a batch of del operations
+var delBatch = db.generateBatch(triple, &#x27;del&#x27;);
+```
+
+### Generate levelup query
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.utilities.maskUpdater" id="apidoc.element.levelgraph.utilities.maskUpdater">
+        function <span class="apidocSignatureSpan">levelgraph.utilities.</span>maskUpdater
+        <span class="apidocSignatureSpan">(pattern)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function maskUpdater(pattern) {
+  var variables = variablesMask(pattern);
+  return function(solution, mask) {
+    return Object.keys(variables).reduce(function(newMask, key) {
+      var variable = variables[key];
+      if (variable.isBound(solution)) {
+        newMask[key] = solution[variable.name];
+      }
+      newMask.filter = pattern.filter;
+      return newMask;
+    }, Object.keys(mask).reduce(function(acc, key) {
+      acc[key] = mask[key];
+      return acc;
+    }, {}));
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+JoinStream.prototype._transform = function transform(solution, encoding, done) {
+if (this._ended) {
+  return done();
+}
+
+var that = this
+  , newMask = this.<span class="apidocCodeKeywordSpan">maskUpdater</span>(solution, this.mask);
+
+that._lastSolution = solution;
+that._readStream = this.db.getStream(newMask, this._indexPreferences);
+
+that._readStream.on(&#x27;data&#x27;, that._onDataStream);
+that._readStream.on(&#x27;error&#x27;, that._onErrorStream);
+that._readStream.on(&#x27;end&#x27;, done);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.utilities.matcher" id="apidoc.element.levelgraph.utilities.matcher">
+        function <span class="apidocSignatureSpan">levelgraph.utilities.</span>matcher
+        <span class="apidocSignatureSpan">(pattern)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function matcher(pattern) {
+  var variables = variablesMask(pattern);
+
+  return function realMatcher(solution, triple) {
+    var key, bindable = true, newsolution = solution;
+
+    for (key in variables) {
+      if (newsolution &#x26;&#x26; variables.hasOwnProperty(key)) {
+        newsolution = variables[key].bind(newsolution, triple[key]);
+      }
+    }
+
+    return newsolution;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  this.once(&#x27;pipe&#x27;, function(source) {
+source.on(&#x27;error&#x27;, function(err) {
+  that.emit(&#x27;error&#x27;, err);
+});
+  });
+
+  this._onDataStream = function onDataStream(triple) {
+var newsolution = that.<span class="apidocCodeKeywordSpan">matcher</span>(that._lastSolution, triple);
+
+if (that._ended || !newsolution) {
+  return;
+}
+
+that.push(newsolution);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.utilities.materializer" id="apidoc.element.levelgraph.utilities.materializer">
+        function <span class="apidocSignatureSpan">levelgraph.utilities.</span>materializer
+        <span class="apidocSignatureSpan">(pattern, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function materializer(pattern, data) {
+  return Object.keys(pattern)
+               .reduce(function(result, key) {
+
+    if (pattern[key] instanceof Variable) {
+      result[key] = data[pattern[key].name];
+    } else {
+      result[key] = pattern[key];
+    }
+
+    return result;
+  }, {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.utilities.possibleIndexes" id="apidoc.element.levelgraph.utilities.possibleIndexes">
+        function <span class="apidocSignatureSpan">levelgraph.utilities.</span>possibleIndexes
+        <span class="apidocSignatureSpan">(types)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function possibleIndexes(types) {
+  var result = Object.keys(defs).filter(function(key) {
+    var matches = 0;
+    return defs[key].every(function (e, i) {
+      if (types.indexOf(e) &#x3e;= 0) {
+        matches++;
+        return true;
+      }
+
+      if (matches === types.length) {
+        return true;
+      }
+    });
+  });
+
+  result.sort();
+
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.utilities.queryMask" id="apidoc.element.levelgraph.utilities.queryMask">
+        function <span class="apidocSignatureSpan">levelgraph.utilities.</span>queryMask
+        <span class="apidocSignatureSpan">(object)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function queryMask(object) {
+  return objectMask(b, object);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+doSortQueryPlan = function(first, second) {
+  if (first === null || first.stream === JoinStream) {
+return null;
+  }
+
+  var firstQueryMask = utilities.<span class="apidocCodeKeywordSpan">queryMask</span>(first)
+, secondQueryMask = utilities.queryMask(second)
+, firstVariablesMask = utilities.variablesMask(first)
+, secondVariablesMask = utilities.variablesMask(second)
+
+, firstVariables = Object.keys(firstVariablesMask).map(function(key) {
+    return firstVariablesMask[key];
+  })
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.utilities.variablesMask" id="apidoc.element.levelgraph.utilities.variablesMask">
+        function <span class="apidocSignatureSpan">levelgraph.utilities.</span>variablesMask
+        <span class="apidocSignatureSpan">(object)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function variablesMask(object) {
+  return objectMask(c, object);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+doSortQueryPlan = function(first, second) {
+  if (first === null || first.stream === JoinStream) {
+return null;
+  }
+
+  var firstQueryMask = utilities.queryMask(first)
+, secondQueryMask = utilities.queryMask(second)
+, firstVariablesMask = utilities.<span class="apidocCodeKeywordSpan">variablesMask</span>(first)
+, secondVariablesMask = utilities.variablesMask(second)
+
+, firstVariables = Object.keys(firstVariablesMask).map(function(key) {
+    return firstVariablesMask[key];
+  })
+
+, secondVariables = Object.keys(secondVariablesMask).map(function(key) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.utilities.wrapCallback" id="apidoc.element.levelgraph.utilities.wrapCallback">
+        function <span class="apidocSignatureSpan">levelgraph.utilities.</span>wrapCallback
+        <span class="apidocSignatureSpan">(method)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapCallback(method) {
+  return function(query, cb) {
+    var args = Array.prototype.slice.call(arguments, 0)
+      , callback = args.pop()
+      , stream = null;
+
+    stream = this[method].apply(this, args);
+
+    stream.pipe(new CallbackStream({ objectMode: true }, callback));
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.levelgraph.variable" id="apidoc.module.levelgraph.variable">module levelgraph.variable</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.variable.variable" id="apidoc.element.levelgraph.variable.variable">
+        function <span class="apidocSignatureSpan">levelgraph.</span>variable
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Variable(name) {
+  if (!(this instanceof Variable)) {
+    return new Variable(name);
+  }
+
+  this.name = name;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.levelgraph.variable.prototype" id="apidoc.module.levelgraph.variable.prototype">module levelgraph.variable.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.variable.prototype.bind" id="apidoc.element.levelgraph.variable.prototype.bind">
+        function <span class="apidocSignatureSpan">levelgraph.variable.prototype.</span>bind
+        <span class="apidocSignatureSpan">(solution, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bind = function (solution, value) {
+  var newsolution = {}
+    , key;
+
+  if (!this.isBindable(solution, value)) {
+    return null;
+  }
+
+  for (key in solution) {
+    if (solution.hasOwnProperty(key)) {
+      newsolution[key] = solution[key];
+    }
+  }
+
+  newsolution[this.name] = value;
+
+  return newsolution;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  console.log(friends); // will print [{ a: &#x22;daniele&#x22; }]
+});
+```
+
+Variables can also be bound to a specific value, like so:
+```javascript
+db.nav(&#x22;matteo&#x22;).archIn(&#x22;friend&#x22;).<span class="apidocCodeKeywordSpan">bind</span>(&#x22;lucio&#x22;).archOut
+(&#x22;friend&#x22;).bind(&#x22;marco&#x22;).
+      values(function(err, friends) {
+  console.log(friends); // this will print [&#x27;marco&#x27;]
+});
+```
+
+A materialized search can also be produced, like so:
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.variable.prototype.isBindable" id="apidoc.element.levelgraph.variable.prototype.isBindable">
+        function <span class="apidocSignatureSpan">levelgraph.variable.prototype.</span>isBindable
+        <span class="apidocSignatureSpan">(solution, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isBindable = function (solution, value) {
+  return !solution[this.name] || solution[this.name] === value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.name = name;
+}
+
+Variable.prototype.bind = function(solution, value) {
+var newsolution = {}
+  , key;
+
+if (!this.<span class="apidocCodeKeywordSpan">isBindable</span>(solution, value)) {
+  return null;
+}
+
+for (key in solution) {
+  if (solution.hasOwnProperty(key)) {
+    newsolution[key] = solution[key];
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.variable.prototype.isBound" id="apidoc.element.levelgraph.variable.prototype.isBound">
+        function <span class="apidocSignatureSpan">levelgraph.variable.prototype.</span>isBound
+        <span class="apidocSignatureSpan">(solution)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isBound = function (solution) {
+  return solution[this.name] &#x26;&#x26; true || false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var variablesMask = module.exports.variablesMask;
+
+function maskUpdater(pattern) {
+var variables = variablesMask(pattern);
+return function(solution, mask) {
+  return Object.keys(variables).reduce(function(newMask, key) {
+    var variable = variables[key];
+    if (variable.<span class="apidocCodeKeywordSpan">isBound</span>(solution)) {
+      newMask[key] = solution[variable.name];
+    }
+    newMask.filter = pattern.filter;
+    return newMask;
+  }, Object.keys(mask).reduce(function(acc, key) {
+    acc[key] = mask[key];
+    return acc;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.levelgraph.writestream" id="apidoc.module.levelgraph.writestream">module levelgraph.writestream</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.writestream.writestream" id="apidoc.element.levelgraph.writestream.writestream">
+        function <span class="apidocSignatureSpan">levelgraph.</span>writestream
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WriteStream(options) {
+  if (!(this instanceof WriteStream)) {
+    return new WriteStream(options);
+  }
+
+  options = options || {};
+  options.objectMode = true;
+
+  Transform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.writestream.super_" id="apidoc.element.levelgraph.writestream.super_">
+        function <span class="apidocSignatureSpan">levelgraph.writestream.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Transform(options) {
+  if (!(this instanceof Transform)) return new Transform(options);
+
+  Duplex.call(this, options);
+
+  this._transformState = new TransformState(this);
+
+  var stream = this;
+
+  // start out asking for a readable event once data is transformed.
+  this._readableState.needReadable = true;
+
+  // we have implemented the _read method, and done the other things
+  // that Readable wants before the first _read call, so unset the
+  // sync guard flag.
+  this._readableState.sync = false;
+
+  if (options) {
+    if (typeof options.transform === &#x27;function&#x27;) this._transform = options.transform;
+
+    if (typeof options.flush === &#x27;function&#x27;) this._flush = options.flush;
+  }
+
+  // When the writable side finishes, then flush out anything remaining.
+  this.once(&#x27;prefinish&#x27;, function () {
+    if (typeof this._flush === &#x27;function&#x27;) this._flush(function (er, data) {
+      done(stream, er, data);
+    });else done(stream);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.levelgraph.writestream.prototype" id="apidoc.module.levelgraph.writestream.prototype">module levelgraph.writestream.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.levelgraph.writestream.prototype._transform" id="apidoc.element.levelgraph.writestream.prototype._transform">
+        function <span class="apidocSignatureSpan">levelgraph.writestream.prototype.</span>_transform
+        <span class="apidocSignatureSpan">(data, encoding, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_transform = function (data, encoding, done) {
+  var that = this, i, actions = genActions(data);
+
+  for (i = 0; i &#x3c; actions.length; i++) {
+    that.push(actions[i]);
+  }
+
+  done();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
